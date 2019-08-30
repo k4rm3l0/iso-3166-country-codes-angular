@@ -1,328 +1,328 @@
 'use strict';
 
 angular.module('iso-3166-country-codes', [])
-  .factory('ISO3166', function() {
-    var holder = {};
+    .factory('ISO3166', function() {
+      var holder = {};
 
-    holder.codeToCountry = {
-      'AF': 'Afghanistan',
-      'AX': 'Åland Islands',
-      'AL': 'Albania',
-      'DZ': 'Algeria',
-      'AS': 'American Samoa',
-      'AD': 'Andorra',
-      'AO': 'Angola',
-      'AI': 'Anguilla',
-      'AQ': 'Antarctica',
-      'AG': 'Antigua and Barbuda',
-      'AR': 'Argentina',
-      'AM': 'Armenia',
-      'AW': 'Aruba',
-      'AU': 'Australia',
-      'AT': 'Austria',
-      'AZ': 'Azerbaijan',
-      'BS': 'Bahamas',
-      'BH': 'Bahrain',
-      'BD': 'Bangladesh',
-      'BB': 'Barbados',
-      'BY': 'Belarus',
-      'BE': 'Belgium',
-      'BZ': 'Belize',
-      'BJ': 'Benin',
-      'BM': 'Bermuda',
-      'BT': 'Bhutan',
-      'BO': 'Bolivia, Plurinational State of',
-      'BQ': 'Bonaire, Sint Eustatius and Saba',
-      'BA': 'Bosnia and Herzegovina',
-      'BW': 'Botswana',
-      'BV': 'Bouvet Island',
-      'BR': 'Brazil',
-      'IO': 'British Indian Ocean Territory',
-      'BN': 'Brunei Darussalam',
-      'BG': 'Bulgaria',
-      'BF': 'Burkina Faso',
-      'BI': 'Burundi',
-      'KH': 'Cambodia',
-      'CM': 'Cameroon',
-      'CA': 'Canada',
-      'CV': 'Cape Verde',
-      'KY': 'Cayman Islands',
-      'CF': 'Central African Republic',
-      'TD': 'Chad',
-      'CL': 'Chile',
-      'CN': 'China',
-      'CX': 'Christmas Island',
-      'CC': 'Cocos (keeling) Islands',
-      'CO': 'Colombia',
-      'KM': 'Comoros',
-      'CG': 'Congo',
-      'CD': 'Congo, The Democratic Republic of The',
-      'CK': 'Cook Islands',
-      'CR': 'Costa Rica',
-      'CI': 'Côte D\'Ivoire',
-      'HR': 'Croatia',
-      'CU': 'Cuba',
-      'CW': 'Curaçao',
-      'CY': 'Cyprus',
-      'CZ': 'Czech Republic',
-      'DK': 'Denmark',
-      'DJ': 'Djibouti',
-      'DM': 'Dominica',
-      'DO': 'Dominican Republic',
-      'EC': 'Ecuador',
-      'EG': 'Egypt',
-      'SV': 'El Salvador',
-      'GQ': 'Equatorial Guinea',
-      'ER': 'Eritrea',
-      'EE': 'Estonia',
-      'ET': 'Ethiopia',
-      'FK': 'Falkland Islands (malvinas)',
-      'FO': 'Faroe Islands',
-      'FJ': 'Fiji',
-      'FI': 'Finland',
-      'FR': 'France',
-      'GF': 'French Guiana',
-      'PF': 'French Polynesia',
-      'TF': 'French Southern Territories',
-      'GA': 'Gabon',
-      'GM': 'Gambia',
-      'GE': 'Georgia',
-      'DE': 'Germany',
-      'GH': 'Ghana',
-      'GI': 'Gibraltar',
-      'GR': 'Greece',
-      'GL': 'Greenland',
-      'GD': 'Grenada',
-      'GP': 'Guadeloupe',
-      'GU': 'Guam',
-      'GT': 'Guatemala',
-      'GG': 'Guernsey',
-      'GN': 'Guinea',
-      'GW': 'Guinea-bissau',
-      'GY': 'Guyana',
-      'HT': 'Haiti',
-      'HM': 'Heard Island and Mcdonald Islands',
-      'VA': 'Holy See (vatican City State)',
-      'HN': 'Honduras',
-      'HK': 'Hong Kong',
-      'HU': 'Hungary',
-      'IS': 'Iceland',
-      'IN': 'India',
-      'ID': 'Indonesia',
-      'IR': 'Iran, Islamic Republic of',
-      'IQ': 'Iraq',
-      'IE': 'Ireland',
-      'IM': 'Isle of Man',
-      'IL': 'Israel',
-      'IT': 'Italy',
-      'JM': 'Jamaica',
-      'JP': 'Japan',
-      'JE': 'Jersey',
-      'JO': 'Jordan',
-      'KZ': 'Kazakhstan',
-      'KE': 'Kenya',
-      'KI': 'Kiribati',
-      'KP': 'Korea, Democratic People\'s Republic of',
-      'KR': 'Korea, Republic of',
-      'KW': 'Kuwait',
-      'KG': 'Kyrgyzstan',
-      'LA': 'Lao People\'s Democratic Republic',
-      'LV': 'Latvia',
-      'LB': 'Lebanon',
-      'LS': 'Lesotho',
-      'LR': 'Liberia',
-      'LY': 'Libya',
-      'LI': 'Liechtenstein',
-      'LT': 'Lithuania',
-      'LU': 'Luxembourg',
-      'MO': 'Macao',
-      'MK': 'Macedonia, The Former Yugoslav Republic of',
-      'MG': 'Madagascar',
-      'MW': 'Malawi',
-      'MY': 'Malaysia',
-      'MV': 'Maldives',
-      'ML': 'Mali',
-      'MT': 'Malta',
-      'MH': 'Marshall Islands',
-      'MQ': 'Martinique',
-      'MR': 'Mauritania',
-      'MU': 'Mauritius',
-      'YT': 'Mayotte',
-      'MX': 'Mexico',
-      'FM': 'Micronesia, Federated States of',
-      'MD': 'Moldova, Republic of',
-      'MC': 'Monaco',
-      'MN': 'Mongolia',
-      'ME': 'Montenegro',
-      'MS': 'Montserrat',
-      'MA': 'Morocco',
-      'MZ': 'Mozambique',
-      'MM': 'Myanmar',
-      'NA': 'Namibia',
-      'NR': 'Nauru',
-      'NP': 'Nepal',
-      'NL': 'Netherlands',
-      'NC': 'New Caledonia',
-      'NZ': 'New Zealand',
-      'NI': 'Nicaragua',
-      'NE': 'Niger',
-      'NG': 'Nigeria',
-      'NU': 'Niue',
-      'NF': 'Norfolk Island',
-      'MP': 'Northern Mariana Islands',
-      'NO': 'Norway',
-      'OM': 'Oman',
-      'PK': 'Pakistan',
-      'PW': 'Palau',
-      'PS': 'Palestine, State of',
-      'PA': 'Panama',
-      'PG': 'Papua New Guinea',
-      'PY': 'Paraguay',
-      'PE': 'Peru',
-      'PH': 'Philippines',
-      'PN': 'Pitcairn',
-      'PL': 'Poland',
-      'PT': 'Portugal',
-      'PR': 'Puerto Rico',
-      'QA': 'Qatar',
-      'RE': 'Réunion',
-      'RO': 'Romania',
-      'RU': 'Russian Federation',
-      'RW': 'Rwanda',
-      'BL': 'Saint Barthélemy',
-      'SH': 'Saint Helena, Ascension and Tristan Da Cunha',
-      'KN': 'Saint Kitts and Nevis',
-      'LC': 'Saint Lucia',
-      'MF': 'Saint Martin (French Part)',
-      'PM': 'Saint Pierre and Miquelon',
-      'VC': 'Saint Vincent and The Grenadines',
-      'WS': 'Samoa',
-      'SM': 'San Marino',
-      'ST': 'Sao Tome and Principe',
-      'SA': 'Saudi Arabia',
-      'SN': 'Senegal',
-      'RS': 'Serbia',
-      'SC': 'Seychelles',
-      'SL': 'Sierra Leone',
-      'SG': 'Singapore',
-      'SX': 'Sint Maarten (Dutch Part)',
-      'SK': 'Slovakia',
-      'SI': 'Slovenia',
-      'SB': 'Solomon Islands',
-      'SO': 'Somalia',
-      'ZA': 'South Africa',
-      'GS': 'South Georgia and The South Sandwich Islands',
-      'SS': 'South Sudan',
-      'ES': 'Spain',
-      'LK': 'Sri Lanka',
-      'SD': 'Sudan',
-      'SR': 'Suriname',
-      'SJ': 'Svalbard and Jan Mayen',
-      'SZ': 'Swaziland',
-      'SE': 'Sweden',
-      'CH': 'Switzerland',
-      'SY': 'Syrian Arab Republic',
-      'TW': 'Taiwan, Province of China',
-      'TJ': 'Tajikistan',
-      'TZ': 'Tanzania, United Republic of',
-      'TH': 'Thailand',
-      'TL': 'Timor-leste',
-      'TG': 'Togo',
-      'TK': 'Tokelau',
-      'TO': 'Tonga',
-      'TT': 'Trinidad and Tobago',
-      'TN': 'Tunisia',
-      'TR': 'Turkey',
-      'TM': 'Turkmenistan',
-      'TC': 'Turks and Caicos Islands',
-      'TV': 'Tuvalu',
-      'UG': 'Uganda',
-      'UA': 'Ukraine',
-      'AE': 'United Arab Emirates',
-      'GB': 'United Kingdom',
-      'US': 'United States',
-      'UM': 'United States Minor Outlying Islands',
-      'UY': 'Uruguay',
-      'UZ': 'Uzbekistan',
-      'VU': 'Vanuatu',
-      'VE': 'Venezuela, Bolivarian Republic of',
-      'VN': 'Viet Nam',
-      'VG': 'Virgin Islands, British',
-      'VI': 'Virgin Islands, U.s.',
-      'WF': 'Wallis and Futuna',
-      'EH': 'Western Sahara',
-      'YE': 'Yemen',
-      'ZM': 'Zambia',
-      'ZW': 'Zimbabwe'
-    };
+      holder.codeToCountry = {
+        'AD': 'Andorra',
+        'AE': 'United Arab Emirates',
+        'AF': 'Afghanistan',
+        'AG': 'Antigua and Barbuda',
+        'AI': 'Anguilla',
+        'AL': 'Albania',
+        'AM': 'Armenia',
+        'AO': 'Angola',
+        'AQ': 'Antarctica',
+        'AR': 'Argentina',
+        'AS': 'American Samoa',
+        'AT': 'Austria',
+        'AU': 'Australia',
+        'AW': 'Aruba',
+        'AX': 'Åland Islands',
+        'AZ': 'Azerbaijan',
+        'BA': 'Bosnia and Herzegovina',
+        'BB': 'Barbados',
+        'BD': 'Bangladesh',
+        'BE': 'Belgium',
+        'BF': 'Burkina Faso',
+        'BG': 'Bulgaria',
+        'BH': 'Bahrain',
+        'BI': 'Burundi',
+        'BJ': 'Benin',
+        'BL': 'Saint Barthélemy',
+        'BM': 'Bermuda',
+        'BN': 'Brunei Darussalam',
+        'BO': 'Bolivia, Plurinational State of',
+        'BQ': 'Bonaire, Sint Eustatius and Saba',
+        'BR': 'Brazil',
+        'BS': 'Bahamas',
+        'BT': 'Bhutan',
+        'BV': 'Bouvet Island',
+        'BW': 'Botswana',
+        'BY': 'Belarus',
+        'BZ': 'Belize',
+        'CA': 'Canada',
+        'CC': 'Cocos (Keeling) Islands',
+        'CD': 'Congo, Democratic Republic of the',
+        'CF': 'Central African Republic',
+        'CG': 'Congo',
+        'CH': 'Switzerland',
+        'CI': 'Côte d\'Ivoire',
+        'CK': 'Cook Islands',
+        'CL': 'Chile',
+        'CM': 'Cameroon',
+        'CN': 'China',
+        'CO': 'Colombia',
+        'CR': 'Costa Rica',
+        'CU': 'Cuba',
+        'CV': 'Cabo Verde',
+        'CW': 'Curaçao',
+        'CX': 'Christmas Island',
+        'CY': 'Cyprus',
+        'CZ': 'Czechia',
+        'DE': 'Germany',
+        'DJ': 'Djibouti',
+        'DK': 'Denmark',
+        'DM': 'Dominica',
+        'DO': 'Dominican Republic',
+        'DZ': 'Algeria',
+        'EC': 'Ecuador',
+        'EE': 'Estonia',
+        'EG': 'Egypt',
+        'EH': 'Western Sahara',
+        'ER': 'Eritrea',
+        'ES': 'Spain',
+        'ET': 'Ethiopia',
+        'FI': 'Finland',
+        'FJ': 'Fiji',
+        'FK': 'Falkland Islands (Malvinas)',
+        'FM': 'Micronesia, Federated States of',
+        'FO': 'Faroe Islands',
+        'FR': 'France',
+        'GA': 'Gabon',
+        'GB': 'United Kingdom of Great Britain and Northern Ireland',
+        'GD': 'Grenada',
+        'GE': 'Georgia',
+        'GF': 'French Guiana',
+        'GG': 'Guernsey',
+        'GH': 'Ghana',
+        'GI': 'Gibraltar',
+        'GL': 'Greenland',
+        'GM': 'Gambia',
+        'GN': 'Guinea',
+        'GP': 'Guadeloupe',
+        'GQ': 'Equatorial Guinea',
+        'GR': 'Greece',
+        'GS': 'South Georgia and the South Sandwich Islands',
+        'GT': 'Guatemala',
+        'GU': 'Guam',
+        'GW': 'Guinea-Bissau',
+        'GY': 'Guyana',
+        'HK': 'Hong Kong',
+        'HM': 'Heard Island and McDonald Islands',
+        'HN': 'Honduras',
+        'HR': 'Croatia',
+        'HT': 'Haiti',
+        'HU': 'Hungary',
+        'ID': 'Indonesia',
+        'IE': 'Ireland',
+        'IL': 'Israel',
+        'IM': 'Isle of Man',
+        'IN': 'India',
+        'IO': 'British Indian Ocean Territory',
+        'IQ': 'Iraq',
+        'IR': 'Iran, Islamic Republic of',
+        'IS': 'Iceland',
+        'IT': 'Italy',
+        'JE': 'Jersey',
+        'JM': 'Jamaica',
+        'JO': 'Jordan',
+        'JP': 'Japan',
+        'KE': 'Kenya',
+        'KG': 'Kyrgyzstan',
+        'KH': 'Cambodia',
+        'KI': 'Kiribati',
+        'KM': 'Comoros',
+        'KN': 'Saint Kitts and Nevis',
+        'KP': 'Korea, Democratic People\'s Republic of',
+        'KR': 'Korea, Republic of',
+        'KW': 'Kuwait',
+        'KY': 'Cayman Islands',
+        'KZ': 'Kazakhstan',
+        'LA': 'Lao People\'s Democratic Republic',
+        'LB': 'Lebanon',
+        'LC': 'Saint Lucia',
+        'LI': 'Liechtenstein',
+        'LK': 'Sri Lanka',
+        'LR': 'Liberia',
+        'LS': 'Lesotho',
+        'LT': 'Lithuania',
+        'LU': 'Luxembourg',
+        'LV': 'Latvia',
+        'LY': 'Libya',
+        'MA': 'Morocco',
+        'MC': 'Monaco',
+        'MD': 'Moldova, Republic of',
+        'ME': 'Montenegro',
+        'MF': 'Saint Martin, (French part)',
+        'MG': 'Madagascar',
+        'MH': 'Marshall Islands',
+        'MK': 'North Macedonia',
+        'ML': 'Mali',
+        'MM': 'Myanmar',
+        'MN': 'Mongolia',
+        'MO': 'Macao',
+        'MP': 'Northern Mariana Islands',
+        'MQ': 'Martinique',
+        'MR': 'Mauritania',
+        'MS': 'Montserrat',
+        'MT': 'Malta',
+        'MU': 'Mauritius',
+        'MV': 'Maldives',
+        'MW': 'Malawi',
+        'MX': 'Mexico',
+        'MY': 'Malaysia',
+        'MZ': 'Mozambique',
+        'NA': 'Namibia',
+        'NC': 'New Caledonia',
+        'NE': 'Niger',
+        'NF': 'Norfolk Island',
+        'NG': 'Nigeria',
+        'NI': 'Nicaragua',
+        'NL': 'Netherlands',
+        'NO': 'Norway',
+        'NP': 'Nepal',
+        'NR': 'Nauru',
+        'NU': 'Niue',
+        'NZ': 'New Zealand',
+        'OM': 'Oman',
+        'PA': 'Panama',
+        'PE': 'Peru',
+        'PF': 'French Polynesia',
+        'PG': 'Papua New Guinea',
+        'PH': 'Philippines',
+        'PK': 'Pakistan',
+        'PL': 'Poland',
+        'PM': 'Saint Pierre and Miquelon',
+        'PN': 'Pitcairn',
+        'PR': 'Puerto Rico',
+        'PS': 'Palestine, State of',
+        'PT': 'Portugal',
+        'PW': 'Palau',
+        'PY': 'Paraguay',
+        'QA': 'Qatar',
+        'RE': 'Réunion',
+        'RO': 'Romania',
+        'RS': 'Serbia',
+        'RU': 'Russian Federation',
+        'RW': 'Rwanda',
+        'SA': 'Saudi Arabia',
+        'SB': 'Solomon Islands',
+        'SC': 'Seychelles',
+        'SD': 'Sudan',
+        'SE': 'Sweden',
+        'SG': 'Singapore',
+        'SH': 'Saint Helena, Ascension and Tristan da Cunha',
+        'SI': 'Slovenia',
+        'SJ': 'Svalbard and Jan Mayen',
+        'SK': 'Slovakia',
+        'SL': 'Sierra Leone',
+        'SM': 'San Marino',
+        'SN': 'Senegal',
+        'SO': 'Somalia',
+        'SR': 'Suriname',
+        'SS': 'South Sudan',
+        'ST': 'Sao Tome and Principe',
+        'SV': 'El Salvador',
+        'SX': 'Sint Maarten, (Dutch part)',
+        'SY': 'Syrian Arab Republic',
+        'SZ': 'Eswatini',
+        'TC': 'Turks and Caicos Islands',
+        'TD': 'Chad',
+        'TF': 'French Southern Territories',
+        'TG': 'Togo',
+        'TH': 'Thailand',
+        'TJ': 'Tajikistan',
+        'TK': 'Tokelau',
+        'TL': 'Timor-Leste',
+        'TM': 'Turkmenistan',
+        'TN': 'Tunisia',
+        'TO': 'Tonga',
+        'TR': 'Turkey',
+        'TT': 'Trinidad and Tobago',
+        'TV': 'Tuvalu',
+        'TW': 'Taiwan, Province of China',
+        'TZ': 'Tanzania, United Republic of',
+        'UA': 'Ukraine',
+        'UG': 'Uganda',
+        'UM': 'United States Minor Outlying Islands',
+        'US': 'United States of America',
+        'UY': 'Uruguay',
+        'UZ': 'Uzbekistan',
+        'VA': 'Holy See',
+        'VC': 'Saint Vincent and the Grenadines',
+        'VE': 'Venezuela, Bolivarian Republic of',
+        'VG': 'Virgin Islands, British',
+        'VI': 'Virgin Islands, U.S.',
+        'VN': 'Viet Nam',
+        'VU': 'Vanuatu',
+        'WF': 'Wallis and Futuna',
+        'WS': 'Samoa',
+        'YE': 'Yemen',
+        'YT': 'Mayotte',
+        'ZA': 'South Africa',
+        'ZM': 'Zambia',
+        'ZW': 'Zimbabwe'
+      };
 
-    holder.countryToCode = {};
-    holder.countryCodes = [];
+      holder.countryToCode = {};
+      holder.countryCodes = [];
 
-    for(var key in holder.codeToCountry) {
-      holder.countryToCode[holder.codeToCountry[key].toUpperCase()] = key;
-      holder.countryCodes.push(key);
-    }
-
-    holder.isCountryCode = function(input) {
-      if (angular.isString(input)) {
-        input = input.toUpperCase();
+      for(var key in holder.codeToCountry) {
+        holder.countryToCode[holder.codeToCountry[key].toUpperCase()] = key;
+        holder.countryCodes.push(key);
       }
-      return angular.isDefined(this.codeToCountry[input]);
-    };
 
-    holder.getCountryCode = function(countryName, manipulator) {
-      var countryCode = this.countryToCode[countryName.toUpperCase()];
-      manipulator = manipulator ? manipulator : 'toUpperCase';
-
-      return countryCode && countryCode[manipulator]();
-    };
-
-    holder.getCountryName = function(countryCode, manipulator) {
-      manipulator = manipulator ? manipulator : 'toString';
-
-      return this.codeToCountry[countryCode] && this.codeToCountry[countryCode][manipulator]();
-    };
-
-    holder.getCountryNames = function(countryCodes, manipulator) {
-      manipulator = manipulator ? manipulator : 'toString';
-
-      var countries = {};
-      angular.forEach(countryCodes, function(key) {
-        if (holder.isCountryCode(key)) {
-          countries[key] = holder.getCountryName(key, manipulator);
+      holder.isCountryCode = function(input) {
+        if (angular.isString(input)) {
+          input = input.toUpperCase();
         }
-      });
-      return countries;
-    };
+        return angular.isDefined(this.codeToCountry[input]);
+      };
 
-    return holder;
-  })
-  .filter('isoCountry', ['ISO3166', function(ISO3166){
-    return function (input) {
-      var result = ISO3166.getCountryName(input);
-      return angular.isUndefined(result) ? input : result;
-    };
-  }])
-  .filter('isoCountryCode', ['ISO3166', function(ISO3166){
-    return function (input) {
-      var result = ISO3166.getCountryCode(input);
-      return angular.isUndefined(result) ? input : result;
-    };
-  }])
-  .directive('countryCode', ['ISO3166', function(ISO3166) {
-    return {
-      require: 'ngModel',
-      link: function(scope, elm, attrs, ctrl) {
-        ctrl.$parsers.unshift(function(viewValue) {
-          if(ISO3166.isCountryCode(viewValue)) {
-            ctrl.$setValidity('countrycode', true);
-            return viewValue;
-          } else {
-            ctrl.$setValidity('countrycode', false);
-            return undefined;
+      holder.getCountryCode = function(countryName, manipulator) {
+        var countryCode = this.countryToCode[countryName.toUpperCase()];
+        manipulator = manipulator ? manipulator : 'toUpperCase';
+
+        return countryCode && countryCode[manipulator]();
+      };
+
+      holder.getCountryName = function(countryCode, manipulator) {
+        manipulator = manipulator ? manipulator : 'toString';
+
+        return this.codeToCountry[countryCode] && this.codeToCountry[countryCode][manipulator]();
+      };
+
+      holder.getCountryNames = function(countryCodes, manipulator) {
+        manipulator = manipulator ? manipulator : 'toString';
+
+        var countries = {};
+        angular.forEach(countryCodes, function(key) {
+          if (holder.isCountryCode(key)) {
+            countries[key] = holder.getCountryName(key, manipulator);
           }
         });
-      }
-    };
-  }]);
+        return countries;
+      };
+
+      return holder;
+    })
+    .filter('isoCountry', ['ISO3166', function(ISO3166){
+      return function (input) {
+        var result = ISO3166.getCountryName(input);
+        return angular.isUndefined(result) ? input : result;
+      };
+    }])
+    .filter('isoCountryCode', ['ISO3166', function(ISO3166){
+      return function (input) {
+        var result = ISO3166.getCountryCode(input);
+        return angular.isUndefined(result) ? input : result;
+      };
+    }])
+    .directive('countryCode', ['ISO3166', function(ISO3166) {
+      return {
+        require: 'ngModel',
+        link: function(scope, elm, attrs, ctrl) {
+          ctrl.$parsers.unshift(function(viewValue) {
+            if(ISO3166.isCountryCode(viewValue)) {
+              ctrl.$setValidity('countrycode', true);
+              return viewValue;
+            } else {
+              ctrl.$setValidity('countrycode', false);
+              return undefined;
+            }
+          });
+        }
+      };
+    }]);
