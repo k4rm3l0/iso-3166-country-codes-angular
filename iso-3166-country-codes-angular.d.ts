@@ -270,6 +270,7 @@ export namespace iso3166CountryCodes {
         VU: string;
         WF: string;
         WS: string;
+        XK: string;
         YE: string;
         YT: string;
         ZA: string;

@@ -249,6 +249,7 @@ angular.module('iso-3166-country-codes', [])
         'VU': 'Vanuatu',
         'WF': 'Wallis and Futuna',
         'WS': 'Samoa',
+        'XK': 'Kosovo',
         'YE': 'Yemen',
         'YT': 'Mayotte',
         'ZA': 'South Africa',
